@@ -11,8 +11,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
         styles() {
             return `
-                <div id="container" = >
-            `
+                <div id="container" style ='
+                    position:${position};
+                    top:${this.top};
+                    left:${this.left};
+                    width:${this.radius}px;
+                    height:${this.radius}px;
+                    border-radius:${this.radius}px;
+                    background-color:${backgroundcolor};
+                ' ></div>`;
         }
     }
 })
