@@ -30,35 +30,53 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Utility to reset all outlines
+    function clearOutlines() {
+        ['pink', 'purple', 'blue', 'reset'].forEach(id => {
+            document.getElementById(id).style.outline = 'none';
+        });
+    }
+
     document.getElementById('pink').addEventListener('click', function () {
         backgroundcolor = "#ffc0cb";
+        clearOutlines();
         this.style.outline = "5px solid black";
-        document.getElementById('purple').style.outline = 'none';
-        document.getElementById('blue').style.outline = 'none';
-        document.getElementById('reset').style.outline = 'none';
     });
 
     document.getElementById('purple').addEventListener('click', function () {
         backgroundcolor = "#ca45ca";
+        clearOutlines();
         this.style.outline = "5px solid black";
-        document.getElementById('pink').style.outline = 'none';
-        document.getElementById('blue').style.outline = 'none';
-        document.getElementById('reset').style.outline = 'none';
     });
 
     document.getElementById('blue').addEventListener('click', function () {
         backgroundcolor = "#6868d4";
+        clearOutlines();
         this.style.outline = "5px solid black";
-        document.getElementById('pink').style.outline = 'none';
-        document.getElementById('purple').style.outline = 'none';
-        document.getElementById('reset').style.outline = 'none';
     });
 
     document.getElementById('reset').addEventListener('click', function () {
         document.getElementById('container').innerHTML = '';
+        clearOutlines();
         this.style.outline = "5px solid black";
-        document.getElementById('pink').style.outline = 'none';
-        document.getElementById('purple').style.outline = 'none';
-        document.getElementById('blue').style.outline = 'none';
     });
+
+    // Fade function to shrink and remove circles
+    const fade = () => {
+        const circles = document.getElementById('container').children;
+
+        for (const circle of [...circles]) {
+            let height = parseInt(circle.style.height.replace('px', ''));
+            if (height <= 0) {
+                circle.remove();
+                continue;
+            }
+            height--;
+            const width = height;
+            circle.style.height = `${height}px`;
+            circle.style.width = `${width}px`;
+        }
+    };
+
+    window.setInterval(fade, 50);
 });
