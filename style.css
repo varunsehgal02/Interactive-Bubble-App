@@ -11,22 +11,26 @@ div{
     height: 50px;
     border-radius: 100px;
     background-color: #ffc0cb;
+    outline: 5px solid gray;
 }
 #purple{
     width: 50px;
     height: 50px;
     border-radius: 100px;
     background-color: #ca45ca;
+    outline: 5px solid gray;
 }
 #blue{
     width: 50px;
     height: 50px;
     border-radius: 100px;
     background-color: #6868d4;
+    outline: 5px solid gray;
 }
 #reset{
     width: 50px;
     height: 50px;
     border-radius: 100px;
     background-color: gray;
+    outline: 5px solid gray;
 }
