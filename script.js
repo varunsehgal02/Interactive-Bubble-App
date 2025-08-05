@@ -22,4 +22,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 ' ></div>`;
         }
     }
+
+    document.addEventListener('click',function(event){
+        const circle = new Circle(event);
+        document.getElementById('container').innerHTML += circle.styles();
+    })
 })
