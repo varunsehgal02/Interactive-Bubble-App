@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    display: inline-block;
+    margin: 20px;
+}
+#pink{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #ffc0cb;
+}
+#purple{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #ca45ca;
+}
+#blue{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #6868d4;
+}
+#reset{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: gray;
+}
